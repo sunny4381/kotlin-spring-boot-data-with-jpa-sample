@@ -88,7 +88,6 @@ open class Application {
 private val log = LoggerFactory.getLogger(Application::class.java)
 ```
 
-
 ## main 関数
 
 kotlin らしく、こちらもパッケージレベルのメソッドとして、次のように定義しています。
@@ -98,3 +97,7 @@ fun main(args: Array<String>) {
     SpringApplication.run(Application::class.java, *args)
 }
 ```
+
+## ソースコード
+
+実装の全ては [src/main/kotlin/io/github/sunny4381/main.kt](src/main/kotlin/io/github/sunny4381/main.kt) にあります。
