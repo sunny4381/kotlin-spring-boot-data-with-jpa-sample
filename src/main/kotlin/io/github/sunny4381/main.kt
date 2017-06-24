@@ -30,10 +30,6 @@ interface CustomerRepository : CrudRepository<Customer, Long> {
 
 @SpringBootApplication
 open class Application {
-    fun run(args: Array<String>) {
-        println("こんにちわ世界！")
-    }
-
     @Bean
     open fun demo(repository: CustomerRepository): CommandLineRunner {
         return CommandLineRunner {
@@ -71,7 +67,5 @@ open class Application {
 }
 
 fun main(args: Array<String>) {
-    val ctx = SpringApplication.run(Application::class.java, *args)
-    val app = ctx.getBean(Application::class.java)
-    app.run(args)
+    SpringApplication.run(Application::class.java, *args)
 }
